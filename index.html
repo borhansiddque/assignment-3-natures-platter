@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -8,15 +8,33 @@
     <link rel="shortcut icon" href="./images/mobile-logo.png" type="image/x-icon">
     <!-- Website Title -->
     <title>Nature's Platter - Pick Your Fresh Vegetable</title>
-    <!-- Tailwind CSS CND -->
+    <!-- Font Family CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- DaisyUi & Tailwind CSS CND -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <style>
+    </style>
     <!-- Custom Tailwind Class -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
+                        'primary': '#111',
                         'custom-green': '#179800',
+                        'custom-green-light': '#ddffd6',
+                    },
+                    fontFamily: {
+                        'sora': '"Sora", serif',
+                        'poppins': '"Poppins", serif',
                     }
                 }
             }
@@ -24,8 +42,78 @@
     </script>
 </head>
 
-<body>
+<body class="font-sora">
+    <header class="bg-gradient-to-b from-white to-[#EFEBE3]">
+        <!-- Navbar Section -->
+        <div class="w-full md:w-11/12 mx-auto">
+            <nav
+                class="flex items-center justify-between py-6 px-4 md:px-0 shadow-sm shadow-custom-green md:shadow-none">
+                <!-- Logo -->
+                <div class="">
+                    <!-- Mobile -->
+                    <img src="./images/mobile-logo.png" alt="" class="block md:hidden">
+                    <!-- Desktop -->
+                    <img src="./images/logo-header.png" alt="" class="hidden md:block">
+                </div>
+                <!-- Desktop Menu-->
+                <ul class="md:flex gap-10 hidden">
+                    <li><a href=""
+                            class="text-xl text-primary hover:text-custom-green transition-colors duration-300">Product</a>
+                    </li>
+                    <li><a href=""
+                            class="text-xl text-primary hover:text-custom-green transition-colors duration-300">Services</a>
+                    </li>
+                    <li><a href=""
+                            class="text-xl text-primary hover:text-custom-green transition-colors duration-300">Contact
+                            Us</a></li>
+                </ul>
+                <!-- Navbar Button -->
+                <div class="md:flex items-center gap-5 hidden">
+                    <div class="space-x-2">
+                        <a href="" class="text-2xl text-primary hover:text-custom-green"><i
+                                class="ri-search-line"></i></a>
+                        <a href="" class="text-2xl text-primary hover:text-custom-green"><i
+                                class="ri-shopping-cart-2-line"></i></a>
+                    </div>
+                    <div class="space-x-2">
+                        <button
+                            class="py-3 px-7 text-xl rounded-lg text-primary border border-custom-green hover:bg-custom-green hover:text-white transition-all duration-300">Login</button>
+                        <button
+                            class="py-3 px-7 bg-custom-green text-white text-xl rounded-lg border hover:border hover:border-custom-green hover:bg-white hover:text-primary transition-all duration-300">Register</button>
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="block md:hidden">
+                    <div class="dropdown dropdown-end p-0">
+                        <div tabindex="0" role="button" class="">
+                            <i class="ri-menu-line text-4xl text-custom-green"></i>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-custom-green-light rounded-box z-[1] w-60 mt-3 p-5 shadow">
+                            <li><a class="text-xl text-custom-green">Product</a></li>
+                            <li><a class="text-xl text-custom-green">Services</a></li>
+                            <li><a class="text-xl text-custom-green">Contact Us</a></li>
 
+                            <div class="flex flex-col gap-3 mt-5">
+                                <button
+                                    class="py-3 px-7 bg-custom-green text-white text-xl rounded-lg border hover:border hover:border-custom-green hover:bg-white hover:text-primary transition-all duration-300">Login
+                                </button>
+                                <button
+                                    class="py-3 px-7 bg-custom-green text-white text-xl rounded-lg border hover:border hover:border-custom-green hover:bg-white hover:text-primary transition-all duration-300">Register
+                                </button>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <div class="">
+
+        </div>
+
+    </header>
 
 </body>
 
